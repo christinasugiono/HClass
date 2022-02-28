@@ -5,3 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+Item.destroy_all
+
+5.times do |i|
+  user = User.new(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    address: Faker::Address.street_name,
+    email: "user#{i + 1}@gmail.com",
+    password: "123123"
+  )
+  user.save!
+end
+
+10.times do
+  item = Item.new(
+    name: Faker::Commerce.product_name,
+    description: Faker::Lorem.sentences(number: 1),
+    price: Faker::Commerce.price(range: 50..500),
+    brand: Faker::Commerce.brand,
+    category: Faker::Commerce.department,
+    user: User.all.sample
+  )
+  item.save!
+end
+puts 'Finished!'
