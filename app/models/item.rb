@@ -5,4 +5,5 @@ class Item < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :description, :price, :brand, :category, presence: true
+
 end
