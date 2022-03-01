@@ -57,14 +57,6 @@
   border-radius: 50%;
 }
 
-#container {
-  overflow: hidden;
-  height: 360px;
-  background: #adaaaa;
-  box-shadow: 0 0 15px #3f3e3e33;
-  display: flex;
-  align-items: center;
-}
 
 .card-review {
   width: 250%;
@@ -76,8 +68,4 @@
   padding: 15px;
   margin-left: 610px;
   margin-top: 40px;
-}
-
-a {
-  margin-left: 50px;
 }
