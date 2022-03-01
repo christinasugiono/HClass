@@ -33,6 +33,6 @@ end
   image = URI.open('https://assets.hermes.com/is/image/hermesproduct/herbag-zip-cabine-bag--082835CKAC-worn-1-0-0-1700-1700-q99_b.jpg')
   item.photo.attach(io: image, filename: 'nes.png', content_type: 'image/png')
   item.save!
-  p item.photo
+
 end
 puts 'Finished!'

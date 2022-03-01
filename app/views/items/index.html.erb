@@ -1,15 +1,20 @@
-<div class="cards">
-  <% @items.each do |item| %>
-    <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= item.name%></h2>
-          <p>Items description here!</p>
+<div class="card-wrapper">
+<div class="container">
+  <div class="cards">
+    <% @items.each do |item| %>
+      <div class="card-trip">
+      <%= cl_image_tag item.photo.key, width: 400, height: 300, crop: :fill%>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= item.name%></h2>
+            <p> <%= item.description %> </p>
+          </div>
+          <h2 class="card-trip-pricing">IDR <%= item.price %> </h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
         </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+</div>
+  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoicmF0bmFwdXJ3YXRpIiwiYSI6ImNremkxZGtmdDA0YmQyb2w0cHl2Zm5lNXIifQ.OX6VQg7kVcx3Xz7h7FX52Q'>
 </div>
