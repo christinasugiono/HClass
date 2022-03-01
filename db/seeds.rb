@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
 
 User.destroy_all
 Item.destroy_all
@@ -26,9 +27,10 @@ end
     description: Faker::Lorem.sentences(number: 1),
     price: Faker::Commerce.price(range: 50..500),
     brand: Faker::Commerce.brand,
-    category: Faker::Commerce.department,
+    category: Item::CATEGORIES.sample,
     user: User.all.sample
   )
-  item.save!
+  image = URI.open('https://assets.hermes.com/is/image/hermesproduct/herbag-zip-cabine-bag--082835CKAC-worn-1-0-0-1700-1700-q99_b.jpg')
+  item.photo.attach(io: image, filename: 'nes.png', content_type: 'image/png')
 end
 puts 'Finished!'
