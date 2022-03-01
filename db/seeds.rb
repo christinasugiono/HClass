@@ -10,28 +10,24 @@ require "open-uri"
 User.destroy_all
 Item.destroy_all
 
-5.times do |i|
-  user = User.new(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    address: Faker::Address.street_name,
-    email: "user#{i + 1}@gmail.com",
-    password: "123123"
-  )
-  user.save!
-end
+file = File.open(Rails.root.join("app/assets/images/ratna.png"))
+ratna = User.new(first_name: "Ratna", last_name: "Purwati", address: "Canggu", email: "ratna@gmail.com", password: "123123")
+ratna.avatar.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+ratna.save!
 
-10.times do
-  item = Item.new(
-    name: Faker::Commerce.product_name,
-    description: Faker::Lorem.sentences(number: 1),
-    price: Faker::Commerce.price(range: 50..500),
-    brand: Faker::Commerce.brand,
-    category: Item::CATEGORIES.sample,
-    user: User.all.sample
-  )
-  image = URI.open('https://assets.hermes.com/is/image/hermesproduct/herbag-zip-cabine-bag--082835CKAC-worn-1-0-0-1700-1700-q99_b.jpg')
-  item.photo.attach(io: image, filename: 'nes.png', content_type: 'image/png')
-  item.save!
-end
+file = File.open(Rails.root.join("app/assets/images/nina.jpg"))
+nina = User.new(first_name: "Christina", last_name: "Sugiono", address: "Denpasar", email: "christina@gmail.com", password: "123123")
+nina.avatar.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+nina.save!
+
+file = File.open(Rails.root.join("app/assets/images/jess.jpg"))
+jess = User.new(first_name: "Jess", last_name: "Wong", address: "Kuala Lumpur", email: "jess@gmail.com", password: "123123")
+jess.avatar.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+jess.save!
+
+file = File.open(Rails.root.join("app/assets/images/louboutin_heels.jpeg"))
+item = Item.new(name: "Heels", description: "12CM", price: "5.000", brand: "Christian Loubutin", category: "Shoes", user: ratna)
+item.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+# Item.new(name: "Heels", description: "12CM", price: "5.000", brand: "Christian Loubutin", category: "Shoes")
+item.save!
 puts 'Finished!'
