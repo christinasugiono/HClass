@@ -1,13 +1,15 @@
-<div class="card-trip">
+<div class="cards">
   <% @items.each do |item| %>
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= item.name%></h2>
-      <p>Items description here!</p>
+    <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= item.name%></h2>
+          <p>Items description here!</p>
+        </div>
+        <h2 class="card-trip-pricing">£99.99</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      </div>
     </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-  </div>
   <% end %>
 </div>
