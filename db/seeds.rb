@@ -26,8 +26,24 @@ jess.avatar.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 jess.save!
 
 file = File.open(Rails.root.join("app/assets/images/louboutin_heels.jpeg"))
-item = Item.new(name: "Heels", description: "12CM", price: "5.000", brand: "Christian Loubutin", category: "Shoes", user: ratna)
-item.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+heels = Item.new(name: "Heels", description: "12CM", price: 5000, brand: "Christian Loubutin", category: "Shoes", user: ratna)
+heels.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 # Item.new(name: "Heels", description: "12CM", price: "5.000", brand: "Christian Loubutin", category: "Shoes")
-item.save!
+heels.save!
+
+file = File.open(Rails.root.join("app/assets/images/fendi.webp"))
+fendi = Item.new(name: "Mini Sunshine Shopper", description: "Brown leather mini-bag", price: 7000, brand: "Fendi", category: "Bags", user: ratna)
+fendi.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+fendi.save!
+
+file = File.open(Rails.root.join("app/assets/images/dress.webp"))
+dress = Item.new(name: "Mid Length Dress", description: "White and Black Under The Sea Cotton Poplin", price: 200, brand: "Dior", category: "Clothes", user: ratna)
+dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+dress.save!
+
+file = File.open(Rails.root.join("app/assets/images/scarf.webp"))
+scarf = Item.new(name: "Wow twill up scarf", description: "Twill up in silk twill (100% silk).", price: 100, brand: "Hermes", category: "Accesories", user: ratna)
+scarf.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+scarf.save!
+
 puts 'Finished!'
