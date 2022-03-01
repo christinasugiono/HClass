@@ -1,0 +1,83 @@
+.card-item {
+  overflow: hidden;
+  height: 360px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-item img {
+  height: 100%;
+  width: auto;
+}
+
+.card-item h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: -135px;
+  margin-left: 20px;
+}
+
+.card-item p {
+  font-size: 20px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
+.card-item .card-detail {
+  position: relative;
+}
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin-top: 180px;
+  margin-left: 375px;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}
+
+#avatar {
+  position: absolute;
+  top: 70px;
+  right: 90px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+#container {
+  overflow: hidden;
+  height: 360px;
+  background: #adaaaa;
+  box-shadow: 0 0 15px #3f3e3e33;
+  display: flex;
+  align-items: center;
+}
+
+.card-review {
+  width: 250%;
+}
+
+.reserve-form {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  margin-left: 610px;
+  margin-top: 40px;
+}
+
+a {
+  margin-left: 50px;
+}

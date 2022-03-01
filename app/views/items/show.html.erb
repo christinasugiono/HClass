@@ -1,1 +1,57 @@
-<p>Show html erb</p>
+<div class="container">
+  <div class="card-item">
+    <%= cl_image_tag @item.photo.key %>
+    <div class="card-details">
+      <img id="avatar" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+      <h2><%= @item.name %></h2>
+      <br>
+      <p><%= @item.category %></p>
+      <br>
+      <p><%= @item.description %></p>
+    </div>
+    <a class="btn btn-ghost" href="#">Save for Later</a>
+  </div>
+  <br>
+  <br>
+  <div class="container d-flex">
+    <div>
+      <h3>Reviews:</h3>
+      <div class="card-review">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2>Product name</h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      </div>
+      <br>
+      <div class="card-review">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2>Product name</h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      </div>
+      <br>
+      <div class="card-review">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2>Product name</h2>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      </div>
+    </div>
+    <div class="reserve-form">
+      <%= simple_form_for [@item, @booking] do |f| %>
+        <p>$<%= @item.price %> per day</p>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.submit "Reserve" %>
+      <% end %>
+      <p>You won't be charged yet</p>
+    </div>
+  </div>
+  <br>
+  <a href="#">Click here for more reviews</a>
+  <br>
+  <a href="#">Browse for more classes</a>
+</div>
