@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :bookings, dependent: :destroy
   has_many :items, dependent: :destroy
+  has_one_attached :avatar
 
   validates :first_name, :last_name, :address, presence: true
   validates :first_name, uniqueness: { scope: :last_name }
