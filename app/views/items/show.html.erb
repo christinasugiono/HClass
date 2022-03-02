@@ -1,6 +1,6 @@
 <div class="container mb-4 mt-4">
   <div class="card-item">
-    <%= cl_image_tag @item.photo.key %>
+    <%= cl_image_tag @item.photo.key, width: 200, height: 200, crop: :fill %>
     <%= cl_image_tag @item.user.avatar.key, id:"avatar" %>
     <br>
     <table class="table table-borderless card-body">
