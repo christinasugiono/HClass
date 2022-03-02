@@ -16,7 +16,7 @@
   font-size: 26px;
   font-weight: bold;
   margin-top: -135px;
-  margin-left: 20px;
+  margin-left: 70px;
 }
 
 .card-item p {
@@ -25,11 +25,15 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
-  margin-left: 20px;
+  margin-left: 70px;
 }
 
 .card-item .card-detail {
   position: relative;
+}
+
+.card-body {
+  margin-left: 100px;
 }
 
 .btn-ghost {
@@ -40,8 +44,9 @@
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-  margin-top: 180px;
-  margin-left: 375px;
+  position: absolute;
+  top: 330px;
+  right: 100px;
 }
 
 .btn-ghost:hover {
@@ -50,22 +55,31 @@
 
 #avatar {
   position: absolute;
-  top: 70px;
-  right: 90px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  top: 110px;
+  right: 100px;
 }
 
 
 .card-review {
-  width: 250%;
+  width: 60vw;
+  .card-product-infos {
+    padding-left: 30px;
+  }
 }
 
 .reserve-form {
   border: 1px solid black;
   border-radius: 5px;
   padding: 15px;
-  margin-left: 610px;
-  margin-top: 40px;
+  position: absolute;
+  right: 70px;
+  margin-top: 60px;
+  margin-left: 50px;
+}
+
+#item-name {
+  font-size: 50px;
 }

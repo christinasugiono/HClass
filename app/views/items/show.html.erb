@@ -1,14 +1,33 @@
-<div class="container mb-4">
+<div class="container mb-4 mt-4">
   <div class="card-item">
     <%= cl_image_tag @item.photo.key %>
-    <div class="card-details">
-      <img id="avatar" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-      <h2><%= @item.name %></h2>
-      <br>
-      <p><%= @item.category %></p>
-      <br>
-      <p><%= @item.description %></p>
-    </div>
+    <%= cl_image_tag @item.user.avatar.key, id:"avatar" %>
+    <br>
+    <table class="table table-borderless card-body">
+      <thead>
+        <tr>
+          <th colspan="3"><%= @item.name %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Brand:</th>
+          <td><%= @item.brand %></td>
+        </tr>
+        <tr>
+          <th scope="row">Category:</th>
+          <td><%= @item.category %></td>
+        </tr>
+        <tr>
+          <th scope="row">Description:</th>
+          <td><%= @item.description %></td>
+        </tr>
+        <tr>
+          <th scope="row">Price: </th>
+          <td colspan="4">$<%= @item.price %> per day</td>
+        </tr>
+      </tbody>
+    </table>
     <a class="btn btn-ghost" href="#">Save for Later</a>
   </div>
   <br>
@@ -42,11 +61,12 @@
     </div>
     <div class="reserve-form">
       <%= simple_form_for [@item, @booking] do |f| %>
-        <p>$<%= @item.price %> per day</p>
+        <%= f.input :total_price, as: :hidden %>
         <%= f.input :start_date %>
         <%= f.input :end_date %>
         <%= f.submit "Reserve" %>
       <% end %>
+      <br>
       <p>You won't be charged yet</p>
     </div>
   </div>
