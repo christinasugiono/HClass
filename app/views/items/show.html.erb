@@ -1,34 +1,25 @@
 <div class="container mb-4 mt-4">
   <div class="card-item">
-    <%= cl_image_tag @item.photo.key, width: 200, height:200, crop: :fill %>
 
-    <%# <br> %>
-    <div>
-    <table class="table table-borderless card-body">
-      <thead>
-        <tr>
-          <th colspan="3"><%= @item.name %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Brand:</th>
-          <td><%= @item.brand %></td>
-        </tr>
-        <tr>
-          <th scope="row">Category:</th>
-          <td><%= @item.category %></td>
-        </tr>
-        <tr>
-          <th scope="row">Description:</th>
-          <td><%= @item.description %></td>
-        </tr>
-        <tr>
-          <th scope="row">Price: </th>
-          <td colspan="4">$<%= @item.price %> per day</td>
-        </tr>
-      </tbody>
-    </table>
+    <%= cl_image_tag @item.photo.key, crop: :fill %>
+    <div class="card-item-middle">
+      <h3><%= @item.name %></h3>
+      <br>
+      <div class="item-details d-flex">
+        <div>
+          <p>Brand:</p>
+          <p>Category:</p>
+          <p>Description:</p>
+          <p>Price: </p>
+        </div>
+        <div class="item-value">
+          <p><%= @item.brand %></p>
+          <p><%= @item.category %></p>
+          <p><%= @item.description %></p>
+          <p>$<%= @item.price %> per day</p>
+        </div>
+      </div>
+
     </div>
     <div class="card-item-right">
       <%= cl_image_tag @item.user.avatar.key, id:"avatar" %>
@@ -68,9 +59,9 @@
       <h2>Book now</h2>
       <%= simple_form_for [@item, @booking] do |f| %>
         <%= f.input :total_price, as: :hidden %>
-        <%= f.input :start_date %>
-        <%= f.input :end_date %>
-        <%= f.submit "Reserve", class: "btn btn-secondary" %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date,as: :date, html5: true %>
+        <%= f.submit "Rent Now" %>
       <% end %>
       <br>
       <p>You won't be charged yet</p>
