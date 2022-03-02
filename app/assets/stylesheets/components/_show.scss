@@ -3,7 +3,8 @@
   height: 360px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
 }
 
@@ -44,9 +45,9 @@
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-  position: absolute;
-  top: 330px;
-  right: 100px;
+  // position: absolute;
+  // top: 330px;
+  // right: 100px;
 }
 
 .btn-ghost:hover {
@@ -54,17 +55,17 @@
 }
 
 #avatar {
-  position: absolute;
+  // position: absolute;
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  top: 110px;
-  right: 100px;
+  // top: 110px;
+  // right: 100px;
 }
 
 
 .card-review {
-  width: 60vw;
+  width: 50vw;
   .card-product-infos {
     padding-left: 30px;
   }
@@ -74,12 +75,21 @@
   border: 1px solid black;
   border-radius: 5px;
   padding: 15px;
-  position: absolute;
-  right: 70px;
+  // position: absolute;
+  // right: 70px;
   margin-top: 60px;
   margin-left: 50px;
 }
 
 #item-name {
   font-size: 50px;
+}
+
+.card-item-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 24px;
 }
