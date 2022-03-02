@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @item = Item.find(params[:item_id])
     @booking.user = current_user
-    @booking.total_price = @item.price
+    @booking.total_price = @item.price * (@booking.end_date - @booking.start_date).to_i
     @booking.status = "Pending"
     @booking.item = @item
     if @booking.save
