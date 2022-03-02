@@ -4,6 +4,8 @@ class Item < ApplicationRecord
   has_many :reviews, through: :bookings
   has_one_attached :photo
   CATEGORIES = ["Clothes", "Shoes", "Bags", "Accesories"]
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   validates :name, presence: true, uniqueness: true
   validates :description, :price, :brand, presence: true
