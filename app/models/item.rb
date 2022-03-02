@@ -8,6 +8,6 @@ class Item < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   validates :name, presence: true, uniqueness: true
-  validates :description, :price, :brand, presence: true
+  validates :description, :price, :brand, :address, :photo, presence: true
   validates :category, presence: true, inclusion: { in: CATEGORIES }
 end
