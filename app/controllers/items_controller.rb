@@ -1,6 +1,14 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
+    @markers = @items.geocoded.map do |item|
+      {
+        lat: item.latitude,
+        lng: item.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { item: item }),
+        image_url: helpers.asset_url(item.photo)
+      }
+    end
   end
 
   def show
