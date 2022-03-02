@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
     @booking.status = "Pending"
     @booking.item = @item
     if @booking.save
-      redirect_to item_path(@item)
+      redirect_to dashboard_path
     else
       render "items/show"
     end
