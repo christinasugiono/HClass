@@ -4,6 +4,7 @@
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :brand %>
-  <%= f.input :category %>
-  <%= f.submit %>
+  <%= f.input :address %>
+  <%= f.input :category, collection: Item::CATEGORIES  %>
+  <%= f.submit "Create Item", class: "btn btn-secondary" %>
 <% end %>
