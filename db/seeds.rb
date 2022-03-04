@@ -41,27 +41,27 @@ fendi.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 fendi.save!
 
 file = File.open(Rails.root.join("app/assets/images/dress.webp"))
-dress = Item.new(name: "Mid Length Dress", description: "White and Black Under The Sea Cotton Poplin", price: 200, brand: "Dior", category: "Clothes", user: ratna, address: "Canggu, Bali")
+dress = Item.new(name: "Mid Length Dress", description: "White and Black Under The Sea Cotton Poplin", price: 200, brand: "Dior", category: "Clothes", user: ratna, address: "Kerobokan, Bali")
 dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 dress.save!
 
 file = File.open(Rails.root.join("app/assets/images/scarf.webp"))
-scarf = Item.new(name: "Wow twill up scarf", description: "Twill up in silk twill (100% silk).", price: 100, brand: "Hermes", category: "Accesories", user: nina, address: "Denpasar, Bali")
+scarf = Item.new(name: "Wow twill up scarf", description: "Twill up in silk twill (100% silk).", price: 100, brand: "Hermes", category: "Accesories", user: nina, address: "Tabanan, Bali")
 scarf.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 scarf.save!
 
 file = File.open(Rails.root.join("app/assets/images/valentino.webp"))
-valentino = Item.new(name: "Rockstud Angkle Strap 100mm pumps", description: "Valentino Garavani Rockstud Ankle Strap pump in calfskin leather", price: 100, brand: "Valentino Garavani", category: "Shoes", user: nina, address: "Denpasar, Bali")
+valentino = Item.new(name: "Rockstud Angkle Strap 100mm pumps", description: "Valentino Garavani Rockstud Ankle Strap pump in calfskin leather", price: 100, brand: "Valentino Garavani", category: "Shoes", user: nina, address: "Nusa Dua, Bali")
 valentino.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 valentino.save!
 
 file = File.open(Rails.root.join("app/assets/images/tie.jpeg"))
-tie = Item.new(name: "Chain Pinstripe Tie", description: "Classic tie is crafted from pure silk twill in the Chain Pinstripe print", price: 300, brand: "Versace", category: "Accesories", user: jess, address: "Kuala Lumpur, Malaysia")
+tie = Item.new(name: "Chain Pinstripe Tie", description: "Classic tie is crafted from pure silk twill in the Chain Pinstripe print", price: 300, brand: "Versace", category: "Accesories", user: jess, address: "Ubud, Bali")
 tie.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 tie.save!
 
 file = File.open(Rails.root.join("app/assets/images/ysl.jpeg"))
-ysl = Item.new(name: "Kate Chain Wallet", description: "Wallet with flap made with metal-free tanned leather decorated with YSL initials", price: 300, brand: "YSL", category: "Bags", user: jess, address: "Kuala Lumpur, Malaysia")
+ysl = Item.new(name: "Kate Chain Wallet", description: "Wallet with flap made with metal-free tanned leather decorated with YSL initials", price: 300, brand: "YSL", category: "Bags", user: jess, address: "Kuta, Bali")
 ysl.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 ysl.save!
 
@@ -71,12 +71,12 @@ gucci.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 gucci.save!
 
 file = File.open(Rails.root.join("app/assets/images/dolce.png"))
-dolce = Item.new(name: "Short ocelot-print chiffon dress ", description: "The Dolce&Gabbana Spring/Summer collection", price: 200, brand: "Dolce & Gabbana", category: "Clothes", user: ratna, address: "Canggu, Bali")
+dolce = Item.new(name: "Short ocelot-print chiffon dress ", description: "The Dolce&Gabbana Spring/Summer collection", price: 200, brand: "Dolce & Gabbana", category: "Clothes", user: ratna, address: "Sanur, Bali")
 dolce.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 dolce.save!
 
 file = File.open(Rails.root.join("app/assets/images/celine.webp"))
-celine = Item.new(name: "Triomphe 04 Sunglasses in Acetate Black", description: "Temple length 5.3 in lens width 2.2", price: 200, brand: "Celine", category: "Accesories", user: jess, address: "Kuala Lumpur, Malaysia")
+celine = Item.new(name: "Triomphe 04 Sunglasses in Acetate Black", description: "Temple length 5.3 in lens width 2.2", price: 200, brand: "Celine", category: "Accesories", user: jess, address: "Gianyar, Bali")
 celine.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 celine.save!
 puts "#{Item.count} items created"
