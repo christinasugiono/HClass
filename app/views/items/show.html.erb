@@ -26,6 +26,7 @@
     </div>
     <div class="card-item-right">
       <%= cl_image_tag @item.user.avatar.key, id:"avatar" %>
+
        <div class="reserve-form">
         <h3>Rent Now</h3>
         <%= simple_form_for [@item, @booking] do |f| %>
@@ -37,6 +38,8 @@
         <br>
         <p>You won't be charged yet</p>
       </div>
+      <%= link_to "Save for Later", dashboard_path, class:"btn btn-ghost" %>
+
     </div>
   </div>
   <br>
@@ -85,7 +88,5 @@
         </div>
       </div>
     </div>
-
-
   </div>
 </div>

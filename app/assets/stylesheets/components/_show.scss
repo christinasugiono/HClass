@@ -8,6 +8,11 @@
   height: 70vh;
 }
 
+h3 {
+  font-family: proxima-nova, sans-serif;
+  font-weight: lighter;
+}
+
 .card-item img {
   height: 100%;
   width: 400px;
@@ -30,9 +35,6 @@
   }
 }
 
-.card-item-middle h3 {
-  margin-top: 5px;
-}
 
 #booking_start_date, #booking_end_date {
   width: 100%;
@@ -76,7 +78,6 @@
 }
 
 .reserve-form {
-  padding: 25px;
   margin-left: 180px;
   width: 360px;
   height: 410px;
@@ -84,6 +85,7 @@
   h3 {
     margin-top: 20px;
   }
+
 }
 
 #item-name {
