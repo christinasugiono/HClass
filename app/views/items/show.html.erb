@@ -6,13 +6,13 @@
       <h3><%= @item.name %></h3>
       <br>
       <div class="item-details d-flex">
-        <div>
+        <div data-controller="favourite">
           <p>Brand:</p>
           <p>Category:</p>
           <p>Description:</p>
           <p>Price: </p>
-          <button class="btn bg-transparent" id="favourite"><i class="far fa-heart fa-2x" style='color: #FF0000'></i></button>
-          <div class="text d-none">
+          <button data-action="click->favourite#show" class="btn bg-transparent" data-favourite-target="btn"><i class="far fa-heart fa-2x" data-favourite-target="icon" style='color: #FF0000'></i></button>
+          <div class="text d-none" data-favourite-target="text">
             Saved to favorite!
           </div>
         </div>
