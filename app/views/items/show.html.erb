@@ -6,24 +6,40 @@
       <h3><%= @item.name %></h3>
       <br>
       <div class="item-details d-flex">
-        <div>
+        <div data-controller="favourite">
           <p>Brand:</p>
           <p>Category:</p>
           <p>Description:</p>
           <p>Price: </p>
+          <button data-action="click->favourite#show" class="btn bg-transparent" data-favourite-target="btn"><i class="far fa-heart fa-2x" data-favourite-target="icon" style='color: #FF0000'></i></button>
+          <div class="text d-none" data-favourite-target="text">
+            Saved to favorite!
+          </div>
         </div>
         <div class="item-value">
           <p><%= @item.brand %></p>
           <p><%= @item.category %></p>
           <p><%= @item.description %></p>
-          <p>$<%= @item.price %> per day</p>
+          <p>$<%= @item.price %> / day</p>
         </div>
       </div>
-
     </div>
     <div class="card-item-right">
       <%= cl_image_tag @item.user.avatar.key, id:"avatar" %>
+
+       <div class="reserve-form">
+        <h3>Rent Now</h3>
+        <%= simple_form_for [@item, @booking] do |f| %>
+          <%= f.input :total_price, as: :hidden %>
+          <%= f.input :start_date, as: :date, html5: true %>
+          <%= f.input :end_date,as: :date, html5: true %>
+          <%= f.submit "Request", class:"btn btn-ghost" %>
+        <% end %>
+        <br>
+        <p>You won't be charged yet</p>
+      </div>
       <%= link_to "Save for Later", dashboard_path, class:"btn btn-ghost" %>
+
     </div>
   </div>
   <br>
@@ -32,7 +48,6 @@
     <div>
       <h3>Reviews:</h3>
       <div class="card-review">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos">
           <h2>Esra Parr</h2>
           <div class="users-ratings">
@@ -47,7 +62,7 @@
       </div>
       <br>
       <div class="card-review">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+
         <div class="card-product-infos">
           <h2>Suzy Walton</h2>
           <div class="users-ratings">
@@ -61,7 +76,6 @@
       </div>
       <br>
       <div class="card-review">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos">
           <h2>Rory Williams</h2>
           <div class="users-ratings">
@@ -74,23 +88,5 @@
         </div>
       </div>
     </div>
-
-    <div class="reserve-form">
-      <h3>Rent Now</h3>
-      <%= simple_form_for [@item, @booking] do |f| %>
-        <%= f.input :total_price, as: :hidden %>
-        <%= f.input :start_date, as: :date, html5: true %>
-        <%= f.input :end_date,as: :date, html5: true %>
-        <%= f.submit "Rent Now", class:"btn btn-ghost" %>
-      <% end %>
-      <br>
-      <p>You won't be charged yet</p>
-    </div>
-
-
   </div>
-  <br>
-  <a href="#" class="text-dark">Click here for more reviews</a>
-  <br>
-  <a href="#" class="text-dark">Browse for more classes</a>
 </div>
