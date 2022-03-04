@@ -2,13 +2,14 @@
   justify-content: space-between;
   background: #F6F1EB;
   box-shadow: 0 2px 10px rgba(0,0,0,.2);
-  // a {
-  //   font-family: "Voga";
-  //   font-weight: bold;
-  // }
   position: sticky;
   z-index: 1;
   top: 0;
+
+  a {
+    font-family: "Lato", "Helvetica", "sans-serif";
+    font-weight: normal;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
