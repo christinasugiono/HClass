@@ -2,11 +2,13 @@
   justify-content: space-between;
   background: #F6F1EB;
   box-shadow: 0 2px 10px rgba(0,0,0,.2);
-
   // a {
   //   font-family: "Voga";
   //   font-weight: bold;
   // }
+  position: sticky;
+  z-index: 1;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,4 +17,22 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+.form-control {
+  color: #4A4A4A;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  width: 280px;
+}
+
+.btn-primary {
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  :hover {
+    opacity: 1;
+  }
 }
