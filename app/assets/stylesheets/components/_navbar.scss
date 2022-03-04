@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #FEFFEF;
+  background: #fffafe;
   box-shadow: 0 2px 10px rgba(0,0,0,.2);
   position: sticky;
   z-index: 1;
@@ -17,10 +17,11 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 70px;
+  width: 90px;
   height: 40px;
   object-fit: cover;
 }
+
 .form-control {
   color: #4A4A4A;
   border-radius: 50px;
