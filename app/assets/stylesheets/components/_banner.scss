@@ -1,7 +1,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 200px 0;
 
   h1 {
     margin: 0;
@@ -11,17 +11,11 @@
     font-weight: bold;
   }
 
-  h2 {
-    margin: 12px 0;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 32px;
-    font-weight: bold;
-  }
-
   p {
+    margin: 14px 0;
     font-size: 20px;
     color: white;
-    opacity: .7;
+    opacity: .8;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
 }
