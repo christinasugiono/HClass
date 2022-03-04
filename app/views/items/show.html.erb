@@ -21,7 +21,7 @@
     </div>
     <div class="card-item-right">
       <%= cl_image_tag @item.user.avatar.key, id:"avatar" %>
-      <a class="btn btn-ghost" href="#">Save for Later</a>
+      <%= link_to "Save for Later", dashboard_path, class:"btn btn-ghost" %>
     </div>
   </div>
   <br>
@@ -32,37 +32,60 @@
       <div class="card-review">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <h2>Esra Parr</h2>
+          <div class="users-ratings">
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+          </div>
+          <p>I love it very much!</p>
         </div>
       </div>
       <br>
       <div class="card-review">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <h2>Suzy Walton</h2>
+          <div class="users-ratings">
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+          </div>
+          <p>The condition is very good</p>
         </div>
       </div>
       <br>
       <div class="card-review">
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-product-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+          <h2>Rory Williams</h2>
+          <div class="users-ratings">
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+            <i class='fa fa-star' style='color: #f3da35'></i>
+          </div>
+          <p>It matches me!</p>
         </div>
       </div>
     </div>
+
     <div class="reserve-form">
+      <h3>Rent Now</h3>
       <%= simple_form_for [@item, @booking] do |f| %>
         <%= f.input :total_price, as: :hidden %>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date,as: :date, html5: true %>
-        <%= f.submit "Rent Now" %>
+        <%= f.submit "Rent Now", class:"btn btn-ghost" %>
       <% end %>
       <br>
       <p>You won't be charged yet</p>
     </div>
+
+
   </div>
   <br>
   <a href="#" class="text-dark">Click here for more reviews</a>
