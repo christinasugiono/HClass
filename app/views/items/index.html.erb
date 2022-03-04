@@ -1,20 +1,7 @@
-<%# <div class="container">
-  <div class="dropdown mt-10px">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-      Category
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-      <li><button class="dropdown-item" type="button">Clothes</button></li>
-      <li><button class="dropdown-item" type="button">Shoes</button></li>
-      <li><button class="dropdown-item" type="button">Bags</button></li>
-      <li><button class="dropdown-item" type="button">Accesories</button></li>
-    </ul>
-  </div>
-</div> %>
 <div class="card-wrapper">
   <div class="container">
     <div class="cards">
-      <% @items.each do |item| %>
+      <% @results.each do |item| %>
         <div class="card-trip">
         <%= cl_image_tag item.photo.key, width: 400, height: 300, crop: :fill%>
           <div class="card-trip-infos">
