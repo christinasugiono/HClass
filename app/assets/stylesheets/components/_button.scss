@@ -1,3 +1,11 @@
 .btn-hclass {
   padding: 6px 48px;
+  font-weight: 300;
+  transition: .3s;
+
+  &:hover {
+    background-color: #d4b864;
+    border-color: #d4b864;
+    color: #FFFCF7;
+  }
 }

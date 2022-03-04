@@ -1,2 +1,12 @@
-<h2><%= item.name %></h2>
-<p><%= item.address %></p>
+<div class="card-trip">
+<%= cl_image_tag item.photo.key, width: 400, height: 300, crop: :fill%>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= link_to item.name, item_path(item)%></h2>
+      <p> <%= item.description %> </p>
+      <p><%= item.brand %> </p>
+    </div>
+    <h2 class="card-trip-pricing">$<%= item.price %> </h2>
+    <%= cl_image_tag item.user.avatar.key, height: 40, width: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
+  </div>
+</div>
