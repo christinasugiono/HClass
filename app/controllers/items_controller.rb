@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
         lat: item.latitude,
         lng: item.longitude,
         info_window: render_to_string(partial: "info_window", locals: { item: item }),
-        image_url: helpers.cl_image_path(item.user.avatar.key)
+        image_url: helpers.cl_image_path(item.photo.key)
       }
     end
   end
