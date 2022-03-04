@@ -1,6 +1,6 @@
 <div class="container my-4">
   <h1>Dashboard</h1>
-  <div class="d-flex">
+  <div class="d-flex mt-3">
     <%= cl_image_tag current_user.avatar.key, class: "avatar-large" %>
     <div class="ms-4">
       <p class="m-0"><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></p>
@@ -8,14 +8,66 @@
     </div>
   </div>
   <hr>
+  <% if @owner_status %>
+
   <div class="my-4">
-    <h3>My Bookings</h3>
-    <% @bookings.each do |booking| %>
-      <div class="card-product mt-3">
-        <%= cl_image_tag booking.item.photo.key %>
+    <h3>Offer Requests</h3>
+    <% @bookings_from_user.each do |booking_from_user| %>
+      <div class="card-product mt-3 d-flex justify-content-between">
+        <%= cl_image_tag booking_from_user.item.photo.key %>
         <div class="card-product-infos">
-          <h2><%= booking.item.name %></h2>
-          <p><%= booking.item.description %></p>
+          <h2><%= booking_from_user.item.name %></h2>
+          <p>Booking Date: <strong><%= booking_from_user.start_date %> - <%= booking_from_user.end_date %></strong></p>
+          <h3>Total Price: <strong>$<%= booking_from_user.total_price %></strong></h3>
+        </div>
+        <div class="card-product-right">
+          <%= cl_image_tag booking_from_user.user.avatar.key, class: "avatar" %>
+          <div>
+          <% if booking_from_user.status == "Pending" %>
+            <%= link_to booking_path(booking_from_user, { booking: {status: "Accepted"} }), method: :patch do %>
+              <i class="far fa-check-circle"></i>
+            <% end %>
+            <%= link_to booking_path(booking_from_user, { booking: {status: "Declined"} }), method: :patch do %>
+              <i class="far fa-times-circle"></i>
+            <% end %>
+          <% else %>
+            <% if booking_from_user.status == "Pending" %>
+              <div class="text-white border rounded-pill px-3 border-secondary bg-secondary">
+            <% elsif booking_from_user.status == "Accepted" %>
+              <div class="text-white border rounded-pill px-3 border-success bg-success">
+            <% else %>
+              <div class="text-white border rounded-pill px-3 border-danger bg-danger">
+            <% end %>
+            <%= booking_from_user.status %>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+  <div class="my-4">
+    <h3>Booking Requests</h3>
+    <% @bookings_of_user.each do |booking_of_user| %>
+      <div class="card-product mt-3 d-flex justify-content-between">
+        <%= cl_image_tag booking_of_user.item.photo.key %>
+        <div class="card-product-infos">
+          <h2><%= booking_of_user.item.name %></h2>
+          <p>Booking Date: <strong><%= booking_of_user.start_date %> - <%= booking_of_user.end_date %></strong></p>
+          <h3>Total Price: <strong>$<%= booking_of_user.total_price %></strong></h3>
+        </div>
+        <div class="card-product-right">
+          <%= cl_image_tag booking_of_user.item.user.avatar.key, class: "avatar" %>
+          <% if booking_of_user.status == "Pending" %>
+          <div class="text-white border rounded-pill px-3 border-secondary bg-secondary">
+          <% elsif booking_of_user.status == "Accepted" %>
+          <div class="text-white border rounded-pill px-3 border-success bg-success">
+          <% else %>
+          <div class="text-white border rounded-pill px-3 border-danger bg-danger">
+          <% end %>
+            <%= booking_of_user.status %>
+          </div>
         </div>
       </div>
     <% end %>

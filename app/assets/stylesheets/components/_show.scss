@@ -82,6 +82,7 @@ h3 {
 }
 
 .reserve-form {
+<<<<<<< HEAD
   padding: 25px;
   margin-top: 40px;
   margin-left: 180px;
@@ -91,8 +92,24 @@ h3 {
   h3 {
     margin-top: 20px;
   }
+=======
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 60px;
+  width: 320px;
+>>>>>>> 6769d271e779ade7a2d8edd69155bb3dbbfcc040
 }
 
 #item-name {
   font-size: 50px;
+}
+
+.card-item-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 24px;
 }
