@@ -8,14 +8,45 @@
     </div>
   </div>
   <hr>
+  <% if @owner_status %>
+
+  <div class="my-4">
+    <h3>My Offers</h3>
+    <% @bookings_from_user.each do |booking_from_user| %>
+      <div class="card-product mt-3 d-flex justify-content-between">
+        <%= cl_image_tag booking_from_user.item.photo.key %>
+        <div class="card-product-infos">
+          <h2><%= booking_from_user.item.name %></h2>
+          <p><strong><%= booking_from_user.start_date %> - <%= booking_from_user.end_date %></strong></p>
+          <p><%= booking_from_user.item.description %></p>
+        </div>
+        <div class="card-product-right">
+          <%= cl_image_tag booking_from_user.user.avatar.key, class: "avatar" %>
+          <div>
+          <% if booking_from_user.status == "Pending" %>
+            <%= link_to booking_path(booking_from_user, { booking: {status: "Accepted"} }), method: :patch do %>
+              <i class="far fa-check-circle"></i>
+            <% end %>
+            <%= link_to booking_path(booking_from_user, { booking: {status: "Declined"} }), method: :patch do %>
+              <i class="far fa-times-circle"></i>
+            <% end %>
+          <% else %>
+            <%= booking_from_user.status %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
   <div class="my-4">
     <h3>My Bookings</h3>
-    <% @bookings.each do |booking| %>
+    <% @bookings_of_user.each do |booking_of_user| %>
       <div class="card-product mt-3">
-        <%= cl_image_tag booking.item.photo.key %>
+        <%= cl_image_tag booking_of_user.item.photo.key %>
         <div class="card-product-infos">
-          <h2><%= booking.item.name %></h2>
-          <p><%= booking.item.description %></p>
+          <h2><%= booking_of_user.item.name %></h2>
+          <p><%= booking_of_user.item.description %></p>
         </div>
       </div>
     <% end %>
