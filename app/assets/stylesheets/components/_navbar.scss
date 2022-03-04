@@ -10,6 +10,18 @@
     font-family: "Lato", "Helvetica", "sans-serif";
     font-weight: normal;
   }
+
+  .btn-primary {
+    border-radius: 50px;
+    background-color: rgb(230, 230, 230);
+    font-weight: lighter;
+    transition: opacity 0.3s ease;
+    // border-radius: 50px ;
+
+    :hover {
+      opacity: 1;
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -27,17 +39,6 @@
   font-weight: lighter;
   transition: opacity 0.3s ease;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 2px 16px -8px;
-  width: 280px;
+  width: 380px;
 
-  .btn-primary {
-    border-radius: 50px;
-    background-color: rgb(230, 230, 230);
-    font-weight: lighter;
-    transition: opacity 0.3s ease;
-    border-radius: 50px;
-
-    :hover {
-      opacity: 1;
-    }
-  }
 }
