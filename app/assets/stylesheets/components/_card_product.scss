@@ -29,4 +29,34 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+  flex-grow: 1;
+}
+
+.card-product-right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px;
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.fa-check-circle {
+  font-size: 30px;
+  color: rgb(18, 211, 18);
+  &:hover {
+    color:rgb(15, 117, 15);
+  }
+}
+
+.fa-times-circle {
+  font-size: 30px;
+  color: red;
+  &:hover {
+    color:rgb(129, 10, 10);
+  }
 }
