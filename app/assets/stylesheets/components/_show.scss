@@ -26,12 +26,13 @@
 
 #booking_start_date, #booking_end_date {
   width: 100%;
-  padding: 8px 19px;
+  // padding: 8px 19px;
   letter-spacing: 1px;
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
-  border-radius: 50px;
+  // border-radius: 50px;
+  margin: 0 !important;
   transition: opacity 0.3s ease;
 }
 
