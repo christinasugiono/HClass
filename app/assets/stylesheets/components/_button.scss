@@ -1,11 +1,24 @@
 .btn-hclass {
-  padding: 6px 48px;
-  font-weight: 300;
-  transition: .3s;
+  background-color: white;
+  color: #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
 
   &:hover {
-    background-color: #d4b864;
-    border-color: #d4b864;
-    color: #FFFCF7;
+    color: #747171;
+  }
+}
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+  margin-left: 5px;
+
+  &:hover {
+    color: #747171;
   }
 }
