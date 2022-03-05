@@ -31,7 +31,7 @@ puts "#{User.count} users created"
 
 puts "Creating items"
 file = File.open(Rails.root.join("app/assets/images/louboutin_heels.jpeg"))
-heels = Item.new(name: "Heels", description: "12CM", price: 100, brand: "Christian Loubutin", category: "Shoes", user: ratna, address: "Canggu, Bali")
+heels = Item.new(name: "Christian Loubutin Heels", description: "Christian Loubutin heels, 12CM. Size 37, no defect", price: 70, brand: "Christian Loubutin", category: "Shoes", user: ratna, address: "Canggu, Bali")
 heels.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 heels.save!
 
@@ -72,12 +72,12 @@ ysl.save!
 
 file = File.open(Rails.root.join("app/assets/images/gucci.png"))
 gucci = Item.new(name: "Men's Screener GG sneaker", description: "Vintage sportswear. Influenced by classic trainers from the '70s.
-  Size 44 Euro", price: 300, brand: "Gucci", category: "Shoes", user: nina, address: "Denpasar, Bali")
+  Size 44 Euro", price: 100, brand: "Gucci", category: "Shoes", user: nina, address: "Denpasar, Bali")
 gucci.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 gucci.save!
 
 file = File.open(Rails.root.join("app/assets/images/dolce.png"))
-dolce = Item.new(name: "Short ocelot-print chiffon dress ", description: "The Dolce&Gabbana Spring/Summer collection. Bought in January, 2022", price: 200, brand: "Dolce & Gabbana", category: "Clothes", user: ratna, address: "Sanur, Bali")
+dolce = Item.new(name: "Short ocelot-print chiffon dress ", description: "The Dolce&Gabbana Spring/Summer collection. Bought in January, 2022", price: 95, brand: "Dolce & Gabbana", category: "Clothes", user: ratna, address: "Sanur, Bali")
 dolce.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 dolce.save!
 
@@ -86,6 +86,20 @@ celine = Item.new(name: "Triomphe 04 Sunglasses in Acetate Black", description: 
   No defect.", price: 200, brand: "Celine", category: "Accesories", user: jess, address: "Gianyar, Bali")
 celine.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 celine.save!
+
+file = File.open(Rails.root.join("app/assets/images/balmain.webp"))
+balmain = Item.new(name: "B-Bold wedge sneakers", description: "Bicolor ivory and black Balmain-monogrammed knit B-Bold wedge sneakers.
+  Bought in August 2021. No defect, Size 39", price: 85, brand: "Balmain", category: "Shoes", user: ratna, address: "Mengwi, Bali")
+balmain.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+balmain.save!
+
+file = File.open(Rails.root.join("app/assets/images/jimmy.jpeg"))
+jimmy = Item.new(name: "BON BON BUCKET", description: "Raffia net, Metal bracelet and calf leather top handle. Bag measures: L14 x H15 x W9.5cm.
+  Bought in July 2021", price: 120, brand: "Jimmy Choo", category: "Bags", user: nina, address: "Darmasaba, Bali")
+jimmy.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+jimmy.save!
+
+
 puts "#{Item.count} items created"
 
 puts 'Finished!'
