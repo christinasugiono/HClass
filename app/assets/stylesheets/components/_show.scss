@@ -15,15 +15,8 @@
   background-repeat: no-repeat;
 }
 
-.card-item img {
-  height: 100%;
-  width: 500px;
-  object-fit: cover;
-}
-
 .card-item-middle {
-  margin-left: 0px;
-  padding: 0px 0;
+  padding-right: 10px;
   line-height: 45px;
   position: relative;
   .item-value {
@@ -49,8 +42,9 @@
   border-radius: 50px;
   transition: opacity 0.3s ease;
   margin-left: 5px;
-  :hover {
-    color: #4A4A4A;
+
+  &:hover {
+    color: #747171;
   }
 }
 
@@ -60,7 +54,7 @@
   border-radius: 50%;
   position: absolute;
   top: -10px;
-  right: 100px;
+  right: 75px;
 }
 
 .reserve-form {

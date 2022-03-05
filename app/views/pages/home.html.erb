@@ -1,18 +1,23 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1506152983158-b4a74a01c721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1572705824045-3dd0c9a47945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1034&q=80');">
   <div class="container">
-    <h1>Your desired wardrobe, commitment free.</h1>
-    <p>Rent your favorite pieces at a fraction of the cost</p>
-    <%= link_to "Rent now!", items_path, class: "btn btn-primary btn-hclass" %>
+    <h1>Your dream wardrobe, commitment-free.</h1>
+    <p>Rent your favorite items and have them arrive at your doorstep the next day.</p>
+    <%= link_to "Rent now!", items_path, class: "btn btn-primary btn-ghost" %>
   </div>
 </div>
-
+<div class="container">
+  <p class="quote">
+    "The girls that get it, get it. And the girls that don't, don't."
+  </p>
+</div>
 <div class="container my-4 text-center">
-  <h2 class="pb-4">Get dressed for yourself</h2>
   <div class="cards-vertical mt-4">
     <% @categories.each do |category| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1537832816519-689ad163238b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1159&q=80)">
-        <%= link_to category, items_path(category: category) %>
-      </div>
+      <%= link_to items_path(category: category) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path "#{category}.jpg" %>)">
+          <%= category %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
