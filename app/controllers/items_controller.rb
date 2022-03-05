@@ -2,6 +2,8 @@ class ItemsController < ApplicationController
   def index
     if params[:query].present?
       @results = Item.search_by(params[:query])
+    elsif params[:category].present?
+      @results = Item.where(category: params[:category])
     else
       @results = Item.all
     end
