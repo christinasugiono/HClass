@@ -9,20 +9,21 @@
       <br>
       <div class="item-details d-flex">
         <div data-controller="favourite">
+          <p>Price: </p>
           <p>Brand:</p>
           <p>Category:</p>
           <p>Description:</p>
-          <p>Price: </p>
+          <br>
           <button data-action="click->favourite#show" class="btn bg-transparent" data-favourite-target="btn"><i class="far fa-heart fa-2x" data-favourite-target="icon" style='color: #FF0000'></i></button>
           <div class="text d-none" data-favourite-target="text">
             Saved to favorite!
           </div>
         </div>
         <div class="item-value">
+          <p>$<%= @item.price %> / day</p>
           <p><%= @item.brand %></p>
           <p><%= @item.category %></p>
           <p><%= @item.description %></p>
-          <p>$<%= @item.price %> / day</p>
         </div>
       </div>
     </div>
