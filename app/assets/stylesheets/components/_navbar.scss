@@ -12,7 +12,7 @@
   }
 
   .btn-primary {
-    border-radius: 50px;
+    // border-radius: 50px;
     background-color: rgb(230, 230, 230);
     font-weight: lighter;
     transition: opacity 0.3s ease;
@@ -25,12 +25,11 @@
 
   .form-control {
     color: #4A4A4A;
-    border-radius: 50px;
+    // border-radius: 50px;
     font-weight: 300;
     transition: opacity 0.3s ease;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 2px 16px -8px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
     width: 380px;
-
   }
 }
 
