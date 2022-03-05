@@ -41,22 +41,25 @@ fendi.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 fendi.save!
 
 file = File.open(Rails.root.join("app/assets/images/dress.webp"))
-dress = Item.new(name: "Mid Length Dress", description: "White and Black Under The Sea Cotton Poplin", price: 200, brand: "Dior", category: "Clothes", user: ratna, address: "Kerobokan, Bali")
+dress = Item.new(name: "Mid Length Dress", description: "White and Black Under The Sea Cotton Poplin.
+  Bought in 2021. Flared cut, cap sleeves and a shirt colar. 100% cotton", price: 200, brand: "Dior", category: "Clothes", user: ratna, address: "Kerobokan, Bali")
 dress.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 dress.save!
 
 file = File.open(Rails.root.join("app/assets/images/scarf.webp"))
-scarf = Item.new(name: "Wow twill up scarf", description: "Twill up in silk twill (100% silk).", price: 100, brand: "Hermes", category: "Accesories", user: nina, address: "Tabanan, Bali")
+scarf = Item.new(name: "Wow twill up scarf", description: "Twill up in silk twill. 100% silk, bought in January, 2021. No defect", price: 100, brand: "Hermes", category: "Accesories", user: nina, address: "Tabanan, Bali")
 scarf.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 scarf.save!
 
 file = File.open(Rails.root.join("app/assets/images/valentino.webp"))
-valentino = Item.new(name: "Rockstud Angkle Strap 100mm pumps", description: "Valentino Garavani Rockstud Ankle Strap pump in calfskin leather", price: 100, brand: "Valentino Garavani", category: "Shoes", user: nina, address: "Nusa Dua, Bali")
+valentino = Item.new(name: "Rockstud Angkle Strap 100mm pumps", description: "Valentino Garavani Rockstud Ankle Strap pump in calfskin leather.
+  Bought in February, 2021. Well maintained.", price: 100, brand: "Valentino Garavani", category: "Shoes", user: nina, address: "Nusa Dua, Bali")
 valentino.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 valentino.save!
 
 file = File.open(Rails.root.join("app/assets/images/tie.jpeg"))
-tie = Item.new(name: "Chain Pinstripe Tie", description: "Classic tie is crafted from pure silk twill in the Chain Pinstripe print", price: 300, brand: "Versace", category: "Accesories", user: jess, address: "Ubud, Bali")
+tie = Item.new(name: "Chain Pinstripe Tie", description: "Classic tie is crafted from pure silk twill in the Chain Pinstripe print.
+  Bought in December, 2020. Never been used.", price: 300, brand: "Versace", category: "Accesories", user: jess, address: "Ubud, Bali")
 tie.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 tie.save!
 
